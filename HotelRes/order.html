@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgba(224, 219, 219, 0.7) url(images/black.png) center center fixed;
+            background-size: cover;
+            background-blend-mode: darken;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            margin: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container h1 {
+            background-color: orangered;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            padding: 10px 15px;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .navbar ul li a:hover {
+            box-shadow: 0 3px 10px orangered inset, 0 3px 10px orangered inset;
+        }
+
+        .navbar .reservation {
+            padding: 10px 20px;
+            background-color: orangered;
+            color: white;
+            border-radius: 5px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .order-table {
+            margin-bottom: 20px;
+        }
+
+        .order-table h2 {
+            color: orangered;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .order-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-table th,
+        .order-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .order-table th {
+            background-color: orangered;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .order-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .order-table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .order-summary {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-summary h2 {
+            color: orangered;
+            margin-bottom: 10px;
+        }
+
+        .summary-details p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .summary-details strong {
+            color: orangered;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+
+        /* Payment Section */
+        .payment-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-section h2 {
+            color: orangered;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .payment-section form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .payment-section label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .payment-section input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .payment-section button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .payment-section button:hover {
+            background-color: darkorange;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: orangered;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .social-links {
+            margin-top: 10px;
+        }
+
+        footer .social-links a {
+            margin: 0 15px;
+            font-size: 16px;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <h1>Vedant Restaurant</h1>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="Menu.html">MENU</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="team.html">TEAM</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="order.html">ORDER</a></li>
+                    <li><a class="reservation" href="#">RESERVATION</a></li>
+                </ul>
+            </div>
+        </div>
+        <main class="container">
+            <section class="order-table">
+                <h2>Order Details</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Item Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Grilled Chicken</td>
+                            <td>2</td>
+                            <td>₹450</td>
+                            <td>₹900</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Veg Biryani</td>
+                            <td>1</td>
+                            <td>₹300</td>
+                            <td>₹300</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Chocolate Cake</td>
+                            <td>1</td>
+                            <td>₹500</td>
+                            <td>₹500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-details">
+                    <p><strong>Subtotal:</strong> ₹1700</p>
+                    <p><strong>Tax (5%):</strong> ₹85</p>
+                    <p><strong>Total Amount:</strong> ₹1785</p>
+                </div>
+                <button class="btn">Checkout</button>
+            </section>
+        </main>
+        <section class="payment-section">
+            <h2>Payment</h2>
+            <form id="payment-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required maxlength="16" pattern="\d{16}">
+
+                <label for="expiry">Expiry Date:</label>
+                <input type="month" id="expiry" name="expiry" required>
+
+                <label for="amount">Enter Amount:</label>
+                <input type="number" id="amount" name="amount" required min="1" step="0.01"
+                    placeholder="Enter the payment amount">
+
+
+                <button type="submit" class="btn">Pay Now</button>
+            </form>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2025 Vedant Restaurant | <a href="privacy.html">Privacy Policy</a> | <a
+                        href="terms.html">Terms & Conditions</a></p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/p/Hotel-Vedant-100067033030986/" target="_blank">Facebook</a> |
+                    <a href="https://www.instagram.com/hotelvedant/?hl=en" target="_blank">Instagram</a> |
+                    <a href="https://twitter.com/vedantm_?lang=en" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>

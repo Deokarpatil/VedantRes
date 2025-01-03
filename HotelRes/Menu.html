@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: rgba(219, 213, 213, 0.7) url(images/black.png) center center fixed;
+            background-size: cover;
+            background-blend-mode: darken;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        .container h1{
+            background-color: orangered;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            padding: 18px;
+            text-transform: uppercase;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 4px;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            box-shadow: 0 3px 50px orangered inset;
+        }
+
+        .navbar .reservation {
+            padding: 8px;
+            background-color: orangered;
+            border-radius: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        .item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .item img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+        }
+
+        .item .p-description {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .item .price {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .item .price del {
+            color: #999;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: orangered;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: darkorange;
+        }
+        footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: orangered;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 15px;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vedant Restaurant</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a class="reservation" href="#">RESERVATION</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="item">
+            <img src="Menus/grid_image1.png" alt="Food 1">
+            <p class="p-description">South Indian Thali<br>Mostly Demanded and Tasty One</p>
+            <p class="price"><del>500-</del> 450/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+
+        </div>
+        <div class="item">
+            <img src="Menus/grid_image2.png" alt="Food 2">
+            <p class="p-description">Soyabean Khima</p>
+            <p class="price"><del>300/-</del> 200/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+        <div class="item">
+            <img src="Menus/grid_image3.png" alt="Food 3">
+            <p class="p-description">kulcha-naan-vegetarian-cuisine-roti-indian</p>
+            <p class="price"><del>500/-</del> 450/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+        <div class="item">
+            <img src="Menus/grid_image4.png" alt="Food 4">
+            <p class="p-description">A gluten and dairy free cream bun</p>
+            <p class="price"><del>600/-</del> 550/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+        <div class="item">
+            <img src="Menus/grid_image5.png" alt="Food 5">
+            <p class="p-description">Fried Egg</p>
+            <p class="price"><del>5000/-</del> 4500/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+        <div class="item">
+            <img src="Menus/grid_image6.png" alt="Food 6">
+            <p class="p-description">Indian cuisine</p>
+            <p class="price"><del>250/-</del> 200/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+        <div class="item">
+            <img src="Menus/grid_image7.png" alt="Food 7">
+            <p class="p-description">Chicken Tikka Masala</p>
+            <p class="price"><del>900/-</del> 850/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+        <div class="item">
+            <img src="Menus/hero_image.png" alt="Food 8">
+            <p class="p-description">Mix Veg</p>
+            <p class="price"><del>500/-</del> 450/-</p>
+            <a href="order.html"><button class="btn">Buy Now</button></a>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Vedant Restaurant | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/p/Hotel-Vedant-100067033030986/" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/hotelvedant/?hl=en" target="_blank">Instagram</a> | 
+                <a href="https://twitter.com/vedantm_?lang=en" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>  
