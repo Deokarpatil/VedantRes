@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:rgba(0, 0, 0, 0.7) url(images/black.png) center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container h1{
+    background-color: orangered;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    display: inline-block;
+    padding: 18px;
+    text-transform: uppercase;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 4px;
+    transition: 3.5s;
+}
+
+.navbar ul li a:hover{
+    box-shadow: 0 3px 50px orangered inset,0 3px 50px orangered inset,
+    0 3px 50px orangered inset,0 3px 50px orangered inset;
+}
+
+.navbar .reservation{
+    padding: 8px;
+    background-color: orangered;
+}
+.gallery-header {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.gallery-header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+.gallery {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    color: orangered;
+    margin-bottom: 20px;
+}
+
+.gallery p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+.gallery-item .caption {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: orangered;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-links {
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    margin: 0 15px;
+    font-size: 16px;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Vedant Restaurant</h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="Menu.html">MENU</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a class="reservation" href="#">RESERVATION</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+    <header class="gallery-header">
+        <h1>Our Gallery</h1>
+    </header>
+    </div>
+    <div></div>
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Gallery/img1.jpg" alt="Dish 1">
+                    <p class="caption">Classic Heaven</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img2.jpg" alt="Dish 5">
+                    <p class="caption">Shahi Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img3.jpg" alt="Dish 3">
+                    <p class="caption">King Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img4.jpg" alt="Dish 4">
+                    <p class="caption">Bed</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img5.jpg" alt="Dish 5">
+                    <p class="caption">Queen palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img6.jpg" alt="Dish 6">
+                    <p class="caption">Pavilion Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img7.jpg" alt="Dish 5">
+                    <p class="caption">Golden Space</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img8.jpg" alt="Dish 2">
+                    <p class="caption">Family Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img9.jpg" alt="Dish 5">
+                    <p class="caption">Hot Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img10.jpg" alt="Dish 5">
+                    <p class="caption">Wonder Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img11.jpg" alt="Dish 2">
+                    <p class="caption">Cold Palace</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img12.jpg" alt="Dish 2">
+                    <p class="caption">Dining Space</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img13.jpg" alt="Dish 2">
+                    <p class="caption">Cozy Dining Space</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Gallery/img14.jpg" alt="Dish 2">
+                    <p class="caption">Cold Palace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Vedant Restaurant | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/p/Hotel-Vedant-100067033030986/" target="_blank">Facebook</a> | 
+                <a href="https://www.instagram.com/hotelvedant/?hl=en" target="_blank">Instagram</a> | 
+                <a href="https://twitter.com/vedantm_?lang=en" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
