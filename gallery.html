@@ -81,11 +81,11 @@ body{
 }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 0 20px;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .gallery-item {
     position: relative;
@@ -138,6 +138,69 @@ footer .social-links a {
     margin: 0 15px;
     font-size: 16px;
 }
+/* Tablet View (1024px and below) */
+@media screen and (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .gallery h2 {
+        font-size: 28px;
+    }
+
+    .gallery p {
+        font-size: 16px;
+    }
+
+    .gallery-item .caption {
+        font-size: 14px;
+    }
+}
+
+/* Mobile View (768px and below) */
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .gallery h2 {
+        font-size: 24px;
+    }
+
+    .gallery p {
+        font-size: 14px;
+    }
+
+    .gallery-item .caption {
+        font-size: 12px;
+    }
+}
+
+/* Small Mobile View (480px and below) */
+@media screen and (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .gallery h2 {
+        font-size: 20px;
+    }
+
+    .gallery p {
+        font-size: 12px;
+    }
+
+    .gallery-item .caption {
+        font-size: 10px;
+    }
+}
+
 </style>
 <body>
     <div class="container">

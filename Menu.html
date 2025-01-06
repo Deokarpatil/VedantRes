@@ -21,17 +21,24 @@
             text-align: center;
             padding: 20px;
         }
-        .container h1{
+
+        .container h1 {
             background-color: orangered;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
         }
 
         .navbar ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .navbar ul li {
-            display: inline-block;
             padding: 18px;
             text-transform: uppercase;
         }
@@ -44,7 +51,8 @@
         }
 
         .navbar ul li a:hover {
-            box-shadow: 0 3px 50px orangered inset;
+            box-shadow: 0 3px 50px orangered inset, 0 3px 50px orangered inset,
+                0 3px 50px orangered inset, 0 3px 50px orangered inset;
         }
 
         .navbar .reservation {
@@ -68,6 +76,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
             transition: 0.3s;
+            width: 100%;
+            max-width: 250px;
         }
 
         .item:hover {
@@ -110,33 +120,142 @@
         .btn:hover {
             background-color: darkorange;
         }
+
         footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-}
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
 
-footer a {
-    color: orangered;
-    text-decoration: none;
-}
+        footer a {
+            color: orangered;
+            text-decoration: none;
+        }
 
-footer a:hover {
-    text-decoration: underline;
-}
+        footer a:hover {
+            text-decoration: underline;
+        }
 
-footer .social-links {
-    margin-top: 10px;
-}
+        footer .social-links {
+            margin-top: 10px;
+        }
 
-footer .social-links a {
-    margin: 0 15px;
-    font-size: 16px;
-}
+        footer .social-links a {
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        /* Tablet View (1024px and below) */
+        @media screen and (max-width: 1024px) {
+            .container h1 {
+                font-size: 28px;
+                padding: 8px;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar ul li {
+                padding: 10px;
+            }
+
+            .grid-container {
+                gap: 15px;
+            }
+
+            .item {
+                max-width: 220px;
+            }
+
+            .item img {
+                max-width: 180px;
+            }
+
+            .btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+
+        /* Mobile View (768px and below) */
+        @media screen and (max-width: 768px) {
+            .container h1 {
+                font-size: 24px;
+                padding: 5px;
+            }
+
+            .navbar ul li {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .grid-container {
+                gap: 10px;
+            }
+
+            .item {
+                max-width: 200px;
+            }
+
+            .item img {
+                max-width: 160px;
+            }
+
+            .btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+
+            footer .social-links a {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+        }
+
+        /* Small Mobile View (480px and below) */
+        @media screen and (max-width: 480px) {
+            .container h1 {
+                font-size: 20px;
+                padding: 5px;
+            }
+
+            .navbar ul li {
+                padding: 5px;
+            }
+
+            .item {
+                max-width: 180px;
+            }
+
+            .item img {
+                max-width: 140px;
+            }
+
+            .btn {
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+
+            footer {
+                font-size: 10px;
+            }
+
+            footer .social-links a {
+                margin: 0 8px;
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Vedant Restaurant</h1>
@@ -206,13 +325,15 @@ footer .social-links a {
     </div>
     <footer>
         <div class="footer-container">
-            <p>&copy; 2025 Vedant Restaurant | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            <p>&copy; 2025 Vedant Restaurant | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &
+                    Conditions</a></p>
             <div class="social-links">
-                <a href="https://www.facebook.com/p/Hotel-Vedant-100067033030986/" target="_blank">Facebook</a> | 
-                <a href="https://www.instagram.com/hotelvedant/?hl=en" target="_blank">Instagram</a> | 
+                <a href="https://www.facebook.com/p/Hotel-Vedant-100067033030986/" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/hotelvedant/?hl=en" target="_blank">Instagram</a> |
                 <a href="https://twitter.com/vedantm_?lang=en" target="_blank">Twitter</a>
             </div>
         </div>
     </footer>
 </body>
-</html>  
+
+</html>
