@@ -2,6 +2,8 @@
 
 VedantRes is a static restaurant website designed to provide users with a smooth, elegant, and user-friendly interface to explore menus, learn about the team, browse the gallery, and place orders. Built using only **HTML** and **CSS**, this project is ideal for showcasing UI/UX design skills for a food-related business or portfolio.
 
+**Live Demo**: [VedantRes on Vercel](https://vedant-res.vercel.app/index.html)
+
 ---
 
 ## 🌟 Features
@@ -56,3 +58,4 @@ No JavaScript or backend integration — this is a pure frontend static website 
 1. Clone this repository:
    ```bash
    git clone https://github.com/Deokarpatil/VedantRes.git
+
